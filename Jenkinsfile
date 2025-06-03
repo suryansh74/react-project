@@ -20,5 +20,14 @@ pipeline {
                 '''
             }
         }
+        stage('Test')
+        {
+            steps{
+                sh '''
+                echo "Checking if there is index.html present in dist folder"
+                find dist/sample.txt
+                '''
+            }
+        }
     }
 }
